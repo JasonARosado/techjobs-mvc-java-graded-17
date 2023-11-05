@@ -26,10 +26,8 @@ public class SearchController {
         model.addAttribute("columns", columnChoices);
         return "search";
     }
-    // TODO #3 - Create a handler to process a search request and render the updated search view. The displaySearchResults method should take in a Model parameter.
-    //The method should also take in two other parameters, specifying the type of search and the search term.
-    //In order for these last two parameters to be properly passed in by Spring Boot,
-    // you need to use the correct annotation. Also, you need to name them appropriately, based on the corresponding form field names defined in search.html.
+    // TODO #3 - Create a handler allow the user to search every job or a specific job.
+    //Rewrote the todo to my sensibilities
     @PostMapping("results")
     public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm)  {
         List<Job> jobs;
